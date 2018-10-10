@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color: white;
-  height: 400vh;
+  height: 200vh;
 }
 
 .App-header {
@@ -15,8 +15,11 @@
   background-color: lightslategray;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  color: rgb(20, 20, 20);
+}
+.title2 {
+  color: white;
 }
 
 #bar.container {
@@ -35,7 +38,7 @@
 
 #dark.container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100vh;
   background-color: rgb(50, 95, 110);
 }
@@ -49,11 +52,13 @@
 .ui.line.segment {
   margin-top: 2%;
   margin-left: 5%;
-  width: 60%;
+  width: 55%;
   height: 80%;
 }
 
 .panel {
+  display: flex;
+  flex-direction: column;
   margin-top: 2%;
   margin-left: 5%;
   border-radius: 4px;
@@ -61,4 +66,36 @@
   color: black;
   height: 40%;
   width: 25%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.ui.labeled.input {
+  margin: 5px;
+}
+
+.ui.dividing.header {
+  margin: 4px;
+  margin-bottom: 15px;
+  background-color: rgba(88, 176, 202, 0.5);
+  color: white;
+}
+
+#go {
+  width: 50%;
+  margin: auto;
+  background-color: black;
+  color: cyan;
+}
+#go:hover {
+  color: lightgreen;
+}
+
+input {
+  border-radius: 4px;
+  font-family: serif;
+  margin: 2px;
 }

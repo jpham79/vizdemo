@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Bar from './Bar.js';
-import Scatter from './Scatter.js';
 import Panel from './Panel.js';
 
 class App extends Component {
@@ -27,14 +26,9 @@ class App extends Component {
           <div className="ui bar segment" >
             <Bar />
           </div>
-          <h1>A simple Bar Graph</h1>
+          <h1 className="title">A simple Bar Graph</h1>
         </div>
-        <div className="container" id='dark'>
-          <div className="ui line segment" >
-            <Scatter />
-          </div>
           <Panel />
-        </div>
       </div>
     );
   }

@@ -1,47 +1,41 @@
 import React from 'react';
 import * as v from 'victory';
-// import { VictoryBar } from 'victory';
 
-const data = [
-  { year: 1, earnings: 70000},
-  { year: 2, earnings: 83200 },
-  { year: 3, earnings: 106832 },
-  { year: 4, earnings: 137363 }
-];
+class Glyph extends React.Component {
 
-class CatPoint extends React.Component {
     render() {
-      const {x, y, datum} = this.props;
-      const cat = datum._y >= 0 ? "😻" : "😹";
-      return (
-        <text x={x} y={y} fontSize={30}>
-          {cat}
-        </text>
-      );
+        const { x, y, datum } = this.props;
+
+        let glyph = datum._y >= 0 ? this.props.type1 : this.props.type2;
+        return (
+            <text x={x} y={y} fontSize={this.props.size}>
+                {glyph}
+            </text>
+        );
     }
-  }
+}
+
 class Scatter extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            seed: props.seed
-        }
-    }
+    render() {
+        return (
+            <v.VictoryChart>
+                <v.VictoryLabel
+                    text={"y = Sin(2piX)"}
+                    x={200}
+                    y={10}
+                />
 
-  render() {
-    return (
-        <v.VictoryChart>
-        <v.VictoryScatter
-          y={(d) =>
-            Math.sin(2 * Math.PI * d.x)
-          }
-          samples={25}
-          dataComponent={<CatPoint/>}
-        />
-      </v.VictoryChart>
-    );
-  }
+                <v.VictoryScatter
+                    y={(d) =>
+                        Math.sin(2 * Math.PI * d.x)
+                    }
+                    samples={this.props.seed} //The number of data points on the plot
+                    dataComponent={<Glyph type1={this.props.type1} type2={this.props.type2} size={this.props.size} />} //Takes in a whole component to display as points
+                />
+            </v.VictoryChart>
+        );
+    }
 }
 
 export default Scatter;
