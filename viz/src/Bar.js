@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import './App.css';
 import * as v from 'victory';
 // import { VictoryBar } from 'victory';
 
@@ -10,20 +10,18 @@ const data = [
     {quarter: 4, earnings: 19000}
   ];
 
-class Main extends React.Component {
+class Bar extends React.Component {
   render() {
     return (
-      <div>
+      <v.VictoryChart>
         <v.VictoryBar
-        data={data}
-        // data accessor for x values
-        x="quarter"
-        // data accessor for y values
-        y="earnings"
-      />
-      </div>
+          data={data}
+          x="quarter"
+          y="earnings"
+        />
+      </v.VictoryChart>
     );
   }
 }
 
-export default Main;
+export default Bar;

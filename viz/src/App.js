@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Main from './Client.js';
+import Bar from './Bar.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Main />
+          Victory Demo  
         </header>
+          <div className="container">
+            <div className="ui bar segment" >
+              <Bar />
+            </div>
+            <div className="ui bar segment" >
+              <h1>test</h1>
+            </div>
+          </div>
       </div>
     );
   }
