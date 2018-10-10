@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  background-color: lightblue;
-  height: 1000px;
+  background-color: white;
+  height: 400vh;
 }
 
 .App-header {
@@ -19,28 +19,37 @@
   color: #61dafb;
 }
 
-.container {
+#bar.container {
   display: flex;
-  flex-direction: row;
-  height: 50%;
+  flex-direction: column;
+  height: 80vh;
+  background-color: lightblue;
 }
 
+#light.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: lightblue;
+}
+
+#dark.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(50, 95, 110);
+}
 .ui.bar.segment {
   margin-top: 2%;
-  margin-left: 5%;
-  width: 90%;
-  height: 80%;
-}
-
-.ui.code.segment {
-  margin: 20px;
+  margin-left: 10%;
   width: 80%;
   height: 80%;
-  /* background-color: lightblue; */
-  color: rgb(25, 25, 25);
 }
 
-textarea {
-  width: 100%;
-  height: 100%;
+.ui.line.segment {
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 40%;
+  height: 80%;
 }
+
