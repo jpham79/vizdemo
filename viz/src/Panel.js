@@ -14,7 +14,7 @@ class Panel extends React.Component {
             toggle: false,
             interval: ''
         }
-        this.setType1 = this.setType1.bind(this);
+        this.setType1 = this.setType1.bind(this); //Need to bind functions
         this.setType2 = this.setType2.bind(this);
         this.setSeed = this.setSeed.bind(this);
         this.setSize = this.setSize.bind(this);
@@ -22,7 +22,7 @@ class Panel extends React.Component {
     }
 
     setType1(event) {
-        this.setState({ type1: event.target.value });
+        this.setState({ type1: event.target.value }); //Can only change state with setState function
     }
 
     setType2(event) {
@@ -41,17 +41,15 @@ class Panel extends React.Component {
         this.setState({ seed: this.state.seed + 1 });
     }
 
-    toggle() {
-        this.setState({ toggle: !this.state.toggle });
+    toggle() { 
+        this.setState({ toggle: !this.state.toggle }); //Handles the state of the toggle button
         if (this.state.toggle) {
             clearInterval(this.state.interval);
         } else {
             this.state.interval = setInterval(() =>
-                this.incrementSize(),
-                1000);
+                this.incrementSize(), 1000);
         }
     }
-
 
     render() {
         return (
