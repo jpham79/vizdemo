@@ -29,6 +29,16 @@ class App extends Component {
           <h1 className="title">A simple Bar Graph</h1>
         </div>
           <Panel />
+          <div className="row">
+            <img src={require('./img/app.png')} />
+            <img src={require('./img/bar.png')} />
+            <img src={require('./img/scatter.png')} />
+          </div>
+          <div className="row">
+            <img src={require('./img/panel1.png')} />
+            <img src={require('./img/panel2.png')} />
+          </div>
+
       </div>
     );
   }

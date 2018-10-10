@@ -1,6 +1,5 @@
 import React from 'react';
 import * as v from 'victory';
-// import { VictoryBar } from 'victory';
 
 const data = [
   { year: 1, earnings: 70000},

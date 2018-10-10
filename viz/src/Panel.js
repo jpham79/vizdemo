@@ -54,7 +54,7 @@ class Panel extends React.Component {
     render() {
         return (
             <div className="container" id="dark">
-                <div class="row">
+                <div class="row" id="scatter">
                     <div className="ui line segment">
                         <Scatter seed={this.state.seed} size={this.state.size} type1={this.state.type1} type2={this.state.type2} />
                     </div>
