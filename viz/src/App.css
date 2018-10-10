@@ -35,7 +35,7 @@
 
 #dark.container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100vh;
   background-color: rgb(50, 95, 110);
 }
@@ -49,7 +49,16 @@
 .ui.line.segment {
   margin-top: 2%;
   margin-left: 5%;
-  width: 40%;
+  width: 60%;
   height: 80%;
 }
 
+.panel {
+  margin-top: 2%;
+  margin-left: 5%;
+  border-radius: 4px;
+  background-color: silver;
+  color: black;
+  height: 40%;
+  width: 25%;
+}

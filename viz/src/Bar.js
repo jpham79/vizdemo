@@ -9,8 +9,6 @@ const data = [
   { year: 4, earnings: 137363 }
 ];
 
-const colors = ['red', 'blue', 'orange', 'green'];
-
 class Bar extends React.Component {
   render() {
     return (
