@@ -26,7 +26,21 @@
 }
 
 .ui.bar.segment {
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 90%;
+  height: 80%;
+}
+
+.ui.code.segment {
   margin: 20px;
   width: 80%;
   height: 80%;
+  /* background-color: lightblue; */
+  color: rgb(25, 25, 25);
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
 }
